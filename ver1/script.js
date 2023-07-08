@@ -118,9 +118,10 @@ function hovering(map, monthsprop){
 			layout: {},
 			paint: {
 				"circle-radius": 4,
-				"circle-opacity": 0,
-				"circle-stroke-width":3,
-				"circle-stroke-color": "rgb(255, 230, 230)"
+				"circle-opacity": 1,
+				//"circle-stroke-width":3,
+				//"circle-stroke-color": "rgb(255, 230, 230)"
+				"circle-color": "rgb(255, 230, 230)"
 			}
 		});
 	});
