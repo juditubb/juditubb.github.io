@@ -61,7 +61,7 @@ function dataload(map, data_url){
             'interpolate', ['linear'],
             ['to-number', ['get', 'Months_temp']],
             1, 6,
-            564, 20,
+            564, 24,
           ],
           'circle-color': 'rgb(114, 0, 0)',
           'circle-opacity': 0.7
