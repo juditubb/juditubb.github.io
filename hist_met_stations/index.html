@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>DIS V3 Met stations</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!–– Metadata ––>
+<head>
+	<title>Historical Meteorological Stations in the Carpathian Basin</title>
+  <meta charset='utf-8' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<script src='https://api.mapbox.com/mapbox-gl-js/v3.9.4/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v3.9.4/mapbox-gl.css' rel='stylesheet' />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<!–– Page Content ––>
+<body>
+	<!–– Title and introductory paragraphs ––>
+  <div class='header'>
+    <div id='title'>
+			<h1>Historical Meteorological Stations in The Pannonian Basin (1871-1919) </h1>
+		</div>
+    <div id='text'>
+      <p>
+				The <a href='https://www.met.hu/en/rolunk/tortenet/'>Royal Hungarian Central Institute of Meteorology and Earth Magnetism</a> was founded in 1870, and its yearbooks were published between 1871-1919 and 1939-1944. The original paper-format yearbooks and their scanned versions are availabe in the ELTE University Library of Budapest, Hungary, containing detailed daily records and monthly averages of temperature, humidity, precipitation, air pressure, wind direction and other measurements. Hundreds of stations were active in this period (peak year was 1911 with more than 1400 active stations), yet this dataset has barely been analized due to its analog data format.
+			</p>
+			<p>
+				The map below aims to visualize the territorial coverage of the stations, taking into account that some of them remained active throughout the whole period, while others were functioning only for a couple of years. For an overview of the stations and their activity, choose the „Overview” map to find stations which have extensive data series. Alternatively, feel free to explore how the activity of the stations changed over time by scrolling through the years, focusing on temperature or precipitation measuring locations.
+			</p>
+			<h6>
+				(For the best experience, please open this map on a desktop device rather than a mobile device.)
+			</h6>
+    </div>
+  </div>
+	
+	<!–– Main Content ––>
+	<div class='content'>
+		<div id='leftside'>
+			<!–– Menu with options––>
+			<div id="menu">
+				<h1>Maps</h1>
+				<label class="options">Overview
+					<input id="allyear" type="radio" checked="checked" name="radio">
+					<span class="checkmark"></span>
+				</label>
+				<h2 id='subtitle'>Change Over Time:</h2>
+				<label class="options">Temperature Stations
+					<input id="byyear_t" type="radio" name="radio">
+					<span class="checkmark"></span>
+				</label>
+				<label class="options">Precipitation Stations
+					<input id="byyear_p" type="radio" name="radio">
+					<span class="checkmark"></span>
+				</label>
+			</div>
+			
+			<!–– Information box ––>
+			<div id="click">
+				<h2>Station Data</h2>
+				<h6>(For more information,<br>
+					click on a station.)</h6>
+			</div>
+		</div>
+		
+		<!–– Map and Console ––>
+		<div id='rightside'>
+			<div id='map'></div>
+			<!–– Slider––>
+			<div id='console'>
+				<div class='label' id='slidLabel'><span>1871</span></div>
+				<input id='slider' class='row' type='range' min='1871' max='1919' step='1' value='1871' />
+			</div>
+		</div>
+  </div>
+</body>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
