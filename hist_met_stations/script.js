@@ -315,7 +315,7 @@ function onclick(){
 				 <h3>Country</h3>
 				 <h4>${stations[0].properties.country}</h4>
 				 <h3>${maindatatx} Data</h3>
-				 <h4>${stations[0].properties.[maindata]} years</h4>
+				 <h4>${stations[0].properties[maindata]} years</h4>
 				 <h3>Name in Yearbooks</h3>
 				 <h4>${stations[0].properties.name_yb}</h4>
 				 `
